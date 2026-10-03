@@ -1,0 +1,1 @@
+// NotesPanel.tsx

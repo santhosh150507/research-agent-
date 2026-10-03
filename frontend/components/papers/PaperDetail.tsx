@@ -1,0 +1,1 @@
+// PaperDetail.tsx
