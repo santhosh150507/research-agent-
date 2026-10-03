@@ -9,3 +9,5 @@ pytest
 httpx
 -r requirements-p2.txt
 rank_bm25
+
+pymupdf
