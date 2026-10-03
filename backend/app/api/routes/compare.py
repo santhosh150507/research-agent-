@@ -1,10 +1,13 @@
-from fastapi import APIRouter
-from app.core.errors import AppException
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+from app.services.analysis.compare import compare_papers
+
+class CompareReq(BaseModel):
+    paper_ids: list[int]
 
 router = APIRouter()
-
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
-
 @router.post("/compare")
-def compare_papers(): not_impl()
+def compare(req: CompareReq):
+    if len(req.paper_ids) < 2 or len(req.paper_ids) > 5:
+        raise HTTPException(400, "Need 2-5 papers")
+    return compare_papers(req.paper_ids)
