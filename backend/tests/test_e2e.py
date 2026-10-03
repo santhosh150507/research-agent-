@@ -22,7 +22,9 @@ def test_e2e_flow():
     r = client.get("/api/v1/methods")
     assert r.status_code == 200
     # chat gaps
-    r = client.post("/api/v1/conversations/1/messages", json={"message": "What appears underexplored?"})
+    cres = client.post("/api/v1/conversations").json()
+    cid = cres["id"]
+    r = client.post(f"/api/v1/conversations/{cid}/messages", json={"message": "What appears underexplored?"})
     assert r.status_code == 200
     assert "underexplored" in r.json()["message"]
     # review
