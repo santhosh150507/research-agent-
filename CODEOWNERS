@@ -1,0 +1,14 @@
+* @person1
+frontend/** @person2
+backend/app/api/routes/library.py @person2
+backend/app/api/routes/history.py @person2
+backend/app/api/routes/export.py @person2
+backend/app/api/routes/profile.py @person2
+backend/app/api/routes/dashboard.py @person2
+backend/app/api/routes/recommendations.py @person2
+backend/app/api/routes/collections.py @person2
+backend/app/api/routes/notes.py @person2
+backend/app/services/workspace/** @person2
+backend/app/services/review/exporters.py @person2
+backend/tests/workspace/** @person2
+backend/requirements-p2.txt @person2
