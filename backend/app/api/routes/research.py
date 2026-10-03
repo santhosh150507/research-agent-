@@ -1,10 +1,10 @@
 from fastapi import APIRouter
-from app.core.errors import AppException
+from app.schemas.endpoints import UnderstandQueryReq, UnderstandQueryRes
+from app.services.agent.query_understanding import understand_query_agent
 
 router = APIRouter()
 
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
-
-@router.post("/query/understand")
-def understand_query(): not_impl()
+@router.post("/query/understand", response_model=UnderstandQueryRes)
+def understand_query(req: UnderstandQueryReq):
+    res = understand_query_agent(req.text)
+    return UnderstandQueryRes(**res)
