@@ -1,10 +1,13 @@
 from fastapi import APIRouter
-from app.core.errors import AppException
+from pydantic import BaseModel
+from typing import Optional
+from app.services.analysis.gaps import get_gaps
+
+class GapsReq(BaseModel):
+    search_id: Optional[int] = None
+    paper_ids: Optional[list[int]] = None
 
 router = APIRouter()
-
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
-
 @router.post("/gaps")
-def get_gaps(): not_impl()
+def gaps_endpoint(req: GapsReq):
+    return get_gaps(req.search_id, req.paper_ids)
