@@ -1,14 +1,19 @@
-from fastapi import APIRouter
-from app.core.errors import AppException
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.database import get_db
+from app.api.deps import get_current_user
+from app.services.workspace import history
 
 router = APIRouter()
 
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
-
 @router.get("/history")
-def get_history(): not_impl()
-@router.get("/history/{id}")
-def get_history_item(id: int): not_impl()
-@router.delete("/history/{id}")
-def delete_history(id: int): not_impl()
+def get_history(db: Session = Depends(get_db), user = Depends(get_current_user)):
+    return history.get_history(db, user.id)
+
+@router.get("/history/{history_id}")
+def get_history_item(history_id: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
+    return history.get_history_item(db, user.id, history_id)
+
+@router.delete("/history/{history_id}", status_code=204)
+def delete_history_item(history_id: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
+    history.delete_history_item(db, user.id, history_id)
