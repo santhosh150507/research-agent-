@@ -1,6 +1,6 @@
 import { Claim } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { AlertTriangle, Info } from "lucide-react";
+import { AlertTriangle, Info, Hash } from "lucide-react";
 import { CitationPopover } from "./CitationPopover";
 import { Badge } from "@/components/ui/badge";
 
@@ -43,9 +43,15 @@ export function ClaimView({ claim, className }: ClaimViewProps) {
   }
 
   return (
-    <div className={cn(wrapperClass, className)}>
+    <div className={cn(wrapperClass, className)} data-claim-id={claim.id}>
       <div className="mb-2 flex items-center justify-between gap-2">
-        {kindBadge}
+        <div className="flex items-center gap-2">
+          {kindBadge}
+          <span className="text-[10px] text-muted-foreground flex items-center" title={`Claim ID: ${claim.id}`}>
+            <Hash className="h-3 w-3 mr-0.5" />
+            {claim.id.slice(0, 8)}
+          </span>
+        </div>
         {isInference && (
           <Tooltip icon={<Info className="h-4 w-4 text-amber-600" />} text="This is an AI-generated conclusion not explicitly stated in the sources." />
         )}
@@ -54,9 +60,9 @@ export function ClaimView({ claim, className }: ClaimViewProps) {
       <p className="text-sm leading-relaxed text-foreground">{claim.text}</p>
 
       {missingSources && (
-        <div className="mt-3 flex items-center gap-2 rounded-md bg-destructive/10 p-2 text-xs text-destructive">
-          <AlertTriangle className="h-4 w-4" />
-          <span>Warning: Extracted fact is missing source citations.</span>
+        <div className="mt-3 flex items-center gap-2 rounded-md bg-destructive/10 p-2 text-xs text-destructive font-medium border border-destructive/20">
+          <AlertTriangle className="h-4 w-4 shrink-0" />
+          <span>Warning: Extracted fact is missing source citations. This claim may be hallucinated or ungrounded.</span>
         </div>
       )}
 
@@ -64,7 +70,7 @@ export function ClaimView({ claim, className }: ClaimViewProps) {
         <div className="mt-3 flex flex-wrap gap-1.5">
           {claim.sources.map((source, idx) => (
             <CitationPopover key={idx} source={source}>
-              <button className="inline-flex h-5 items-center justify-center rounded bg-background px-1.5 text-xs font-medium border text-muted-foreground hover:bg-accent hover:text-accent-foreground">
+              <button className="inline-flex h-5 items-center justify-center rounded bg-background px-1.5 text-xs font-medium border text-muted-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent-foreground/50 transition-colors">
                 [{idx + 1}]
               </button>
             </CitationPopover>
@@ -76,8 +82,6 @@ export function ClaimView({ claim, className }: ClaimViewProps) {
 }
 
 function Tooltip({ icon, text }: { icon: React.ReactNode; text: string }) {
-  // Simple inline tooltip via title attribute since we don't have access to the Radix Tooltip Provider context here easily without wrapping, 
-  // or we can just render the icon with a title
   return (
     <span title={text} className="cursor-help">
       {icon}

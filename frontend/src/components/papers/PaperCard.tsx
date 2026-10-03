@@ -1,18 +1,23 @@
 import { Paper } from "@/lib/types";
-import { formatAuthors, formatYear } from "@/lib/format";
+import { formatAuthors, formatYear, getSourceLabel, getSourceColor } from "@/lib/format";
 import { SignalBadges } from "./SignalBadges";
 import { Button } from "@/components/ui/button";
 import { BookmarkPlus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+
+import { RankSignals } from "@/lib/types";
 
 interface PaperCardProps {
   paper: Paper;
+  signals?: RankSignals;
   selected?: boolean;
   onToggleSelect?: (id: number) => void;
   className?: string;
 }
 
-export function PaperCard({ paper, selected, onToggleSelect, className }: PaperCardProps) {
+export function PaperCard({ paper, signals, selected, onToggleSelect, className }: PaperCardProps) {
   return (
     <div
       className={cn(
@@ -32,7 +37,9 @@ export function PaperCard({ paper, selected, onToggleSelect, className }: PaperC
             />
           )}
           <div className="flex flex-col gap-1">
-            <h3 className="text-base font-semibold leading-tight">{paper.title}</h3>
+            <Link href={`/papers/${paper.id}`} className="text-base font-semibold leading-tight hover:underline">
+              {paper.title}
+            </Link>
             <div className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
               <span>{formatAuthors(paper.authors)}</span>
               <span>•</span>
@@ -44,17 +51,37 @@ export function PaperCard({ paper, selected, onToggleSelect, className }: PaperC
                 </>
               )}
             </div>
+            
+            {(paper.topics && paper.topics.length > 0) && (
+              <div className="mt-1 flex flex-wrap gap-1">
+                {paper.topics.slice(0, 3).map((topic, i) => (
+                  <Badge key={i} variant="secondary" className="text-xs font-normal">
+                    {topic}
+                  </Badge>
+                ))}
+                {paper.topics.length > 3 && (
+                  <span className="text-xs text-muted-foreground ml-1">+{paper.topics.length - 3}</span>
+                )}
+              </div>
+            )}
           </div>
         </div>
-        <Button variant="ghost" size="icon" className="shrink-0" title="Save to Library">
-          <BookmarkPlus className="h-4 w-4" />
-        </Button>
+        <div className="flex items-center gap-2 shrink-0">
+          <Badge variant="outline" className={cn("text-xs font-medium", getSourceColor(paper.source))}>
+            {getSourceLabel(paper.source)}
+          </Badge>
+          <Button variant="ghost" size="icon" title="Save to Library">
+            <BookmarkPlus className="h-4 w-4" />
+          </Button>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <div className="text-xs text-muted-foreground">Relevance Signals</div>
-        <SignalBadges signals={paper.signals} />
-      </div>
+      {signals && (
+        <div className="flex flex-col gap-2">
+          <div className="text-xs text-muted-foreground">Relevance Signals</div>
+          <SignalBadges signals={signals} />
+        </div>
+      )}
     </div>
   );
 }
