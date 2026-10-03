@@ -6,5 +6,5 @@ router = APIRouter()
 def not_impl():
     raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
 
-@router.post("/query/understand")
-def understand_query(): not_impl()
+@router.get("/dashboard")
+def get_dashboard(): not_impl()

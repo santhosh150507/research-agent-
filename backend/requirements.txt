@@ -1,1 +1,10 @@
-# requirements.txt
+fastapi
+uvicorn
+sqlalchemy
+alembic
+psycopg2-binary
+pgvector
+pydantic-settings
+pytest
+httpx
+-r requirements-p2.txt
