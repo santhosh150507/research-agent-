@@ -1,1 +1,0 @@
-// ComparisonTable.tsx
