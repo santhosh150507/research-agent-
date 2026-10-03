@@ -1,10 +1,6 @@
 from fastapi import APIRouter
-from app.core.errors import AppException
-
+from app.services.analysis.discovery import get_methods
 router = APIRouter()
-
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
-
 @router.get("/methods")
-def get_methods(): not_impl()
+def methods_endpoint(search_id: int = None):
+    return get_methods(search_id)
