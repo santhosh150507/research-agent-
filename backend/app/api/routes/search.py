@@ -1,16 +1,14 @@
 from fastapi import APIRouter
-from app.core.errors import AppException
+from app.schemas.endpoints import SearchReq, SearchRes
+from app.services.agent.research_loop import run_research_loop
 
 router = APIRouter()
 
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
+@router.post("/search", response_model=SearchRes)
+def search_post(req: SearchReq):
+    res = run_research_loop(req.query, req.filters)
+    return SearchRes(**res)
 
-@router.post("/search")
-def search_post(): not_impl()
-
-@router.get("/search/{search_id}")
-def search_get(search_id: int): not_impl()
-
-@router.get("/search/{search_id}/stream")
-def search_stream(search_id: int): not_impl()
+@router.get("/search/{search_id}", response_model=SearchRes)
+def search_get(search_id: int):
+    return run_research_loop("", None)

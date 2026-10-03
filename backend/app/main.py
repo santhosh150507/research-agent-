@@ -8,6 +8,14 @@ import app.api.routes as api_routes
 
 app = FastAPI(title="AI Research Literature Discovery Agent")
 
+@app.on_event("startup")
+def on_startup():
+    from app.config import settings
+    from app.db.seed import seed_demo_data
+    if settings.demo_mode:
+        seed_demo_data()
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins,
