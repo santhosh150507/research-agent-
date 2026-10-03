@@ -22,3 +22,5 @@ from .message import ConversationMessage
 from .paper_chunk import PaperChunk
 from .embedding import Embedding
 from .literature_review import LiteratureReview
+
+from .upload_job import UploadJob
