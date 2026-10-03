@@ -11,7 +11,7 @@ def test_health():
     assert res.json() == {"status": "ok"}
 
 def test_501_stub():
-    res = client.get("/api/v1/search/1")
+    res = client.get("/api/v1/dashboard/stats")
     assert res.status_code == 501
     assert res.json() == {"error": {"code": "NOT_IMPLEMENTED", "message": "Not Implemented"}}
 
