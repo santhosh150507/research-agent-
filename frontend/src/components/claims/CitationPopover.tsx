@@ -26,7 +26,7 @@ export function CitationPopover({ source, children }: CitationPopoverProps) {
           </div>
           <div className="text-xs text-muted-foreground">Section: {source.section}</div>
           <div className="mt-2 border-l-2 pl-3 text-sm italic text-foreground">
-            "{source.quote}"
+            &quot;{source.quote}&quot;
           </div>
         </div>
       </PopoverContent>

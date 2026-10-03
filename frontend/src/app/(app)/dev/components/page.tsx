@@ -1,3 +1,5 @@
+"use client";
+
 import { PaperCard } from "@/components/papers/PaperCard";
 import { ClaimView } from "@/components/claims/ClaimView";
 import { Unavailable } from "@/components/common/Unavailable";
