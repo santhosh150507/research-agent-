@@ -1,0 +1,2537 @@
+[
+  {
+    "_notice": "Curated demo set for development."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 0)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2012,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var0",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 0)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2012,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var0",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 0)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2012,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var0",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 0)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2012,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var0",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 0)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2012,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var0",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 1)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2013,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var1",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 1)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2013,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var1",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 1)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2013,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var1",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 1)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2013,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var1",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 1)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2013,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var1",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 2)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2014,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var2",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 2)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2014,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var2",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 2)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2014,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var2",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 2)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2014,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var2",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 2)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2014,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var2",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 3)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2015,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var3",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 3)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2015,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var3",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 3)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2015,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var3",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 3)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2015,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var3",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 3)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2015,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var3",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 4)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2016,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var4",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 4)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2016,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var4",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 4)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2016,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var4",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 4)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2016,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var4",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 4)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2016,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var4",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 5)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2017,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var5",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 5)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2017,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var5",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 5)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2017,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var5",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 5)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2017,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var5",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 5)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2017,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var5",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 6)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2018,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var6",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 6)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2018,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var6",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 6)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2018,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var6",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 6)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2018,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var6",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 6)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2018,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var6",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 7)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2019,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var7",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 7)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2019,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var7",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 7)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2019,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var7",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 7)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2019,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var7",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 7)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2019,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var7",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 8)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2020,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var8",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 8)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2020,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var8",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 8)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2020,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var8",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 8)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2020,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var8",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 8)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2020,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var8",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 9)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2021,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var9",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 9)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2021,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var9",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 9)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2021,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var9",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 9)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2021,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var9",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 9)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2021,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var9",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 10)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2022,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var10",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 10)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2022,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var10",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 10)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2022,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var10",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 10)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2022,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var10",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 10)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2022,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var10",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  },
+  {
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback (Variant 11)",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Steffen Rendle"
+      },
+      {
+        "id": 2,
+        "name": "Christoph Freudenthaler"
+      }
+    ],
+    "year": 2023,
+    "venue": "UAI",
+    "doi": "10.1145/1111-var11",
+    "abstract": "We present a generic optimization criterion BPR-Opt for personalized ranking that is the maximum posterior estimator derived from a Bayesian analysis of the problem. We also provide a generic learning algorithm for optimizing models with respect to BPR-Opt.",
+    "citation_count": 5000,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "personalized ranking",
+      "implicit feedback"
+    ],
+    "methods": [
+      "Bayesian Personalized Ranking",
+      "Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Netflix"
+    ],
+    "keywords": [
+      "BPR",
+      "collaborative filtering"
+    ],
+    "problem": "Personalized ranking from implicit feedback.",
+    "methodology": "Maximum posterior estimator (BPR-Opt) and learn algorithm based on stochastic gradient descent.",
+    "findings": "BPR outperforms standard matrix factorization techniques for item recommendation.",
+    "limitations": "Assumes pairwise independence which may not hold in all scenarios.",
+    "future_work": "Extend to context-aware recommendations."
+  },
+  {
+    "title": "Neural Collaborative Filtering (Variant 11)",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Xiangnan He"
+      },
+      {
+        "id": 4,
+        "name": "Lizi Liao"
+      }
+    ],
+    "year": 2023,
+    "venue": "WWW",
+    "doi": "10.1145/3038912.3052569-var11",
+    "abstract": "We develop a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based on neural networks.",
+    "citation_count": 4500,
+    "open_access": true,
+    "topics": [
+      "recommender systems",
+      "deep learning",
+      "collaborative filtering"
+    ],
+    "methods": [
+      "Neural Networks",
+      "Multi-Layer Perceptron",
+      "Generalized Matrix Factorization"
+    ],
+    "datasets": [
+      "MovieLens",
+      "Pinterest"
+    ],
+    "keywords": [
+      "NCF",
+      "implicit feedback",
+      "deep learning"
+    ],
+    "problem": "Modeling non-linear interactions between users and items.",
+    "methodology": "Combine GMF and MLP to learn user-item interactions.",
+    "findings": "NCF significantly outperforms state-of-the-art methods like BPR and eALS.",
+    "limitations": "Computationally more expensive than shallow models.",
+    "future_work": "Incorporate auxiliary information like reviews and context."
+  },
+  {
+    "title": "Deep Knowledge Tracing (Variant 11)",
+    "authors": [
+      {
+        "id": 5,
+        "name": "Chris Piech"
+      },
+      {
+        "id": 6,
+        "name": "Jonathan Bassen"
+      }
+    ],
+    "year": 2023,
+    "venue": "NIPS",
+    "doi": "10.5555/2969239.2969296-var11",
+    "abstract": "We apply Recurrent Neural Networks to the task of knowledge tracing. Our model, Deep Knowledge Tracing (DKT), handles the sequential nature of student interactions with educational software.",
+    "citation_count": 2100,
+    "open_access": true,
+    "topics": [
+      "knowledge tracing",
+      "adaptive learning",
+      "recurrent neural networks"
+    ],
+    "methods": [
+      "Recurrent Neural Networks",
+      "LSTM"
+    ],
+    "datasets": [
+      "ASSISTments",
+      "Khan Academy"
+    ],
+    "keywords": [
+      "DKT",
+      "student modeling",
+      "adaptive education"
+    ],
+    "problem": "Accurately modeling student knowledge over time.",
+    "methodology": "Use LSTM to predict the probability of a student answering the next question correctly.",
+    "findings": "DKT improves AUC significantly compared to Bayesian Knowledge Tracing.",
+    "limitations": "Model lacks interpretability compared to traditional methods.",
+    "future_work": "Explore attention mechanisms and incorporate skill hierarchies."
+  },
+  {
+    "title": "SASRec: Self-Attentive Sequential Recommendation (Variant 11)",
+    "authors": [
+      {
+        "id": 7,
+        "name": "Wang-Cheng Kang"
+      },
+      {
+        "id": 8,
+        "name": "Julian McAuley"
+      }
+    ],
+    "year": 2023,
+    "venue": "ICDM",
+    "doi": "10.1109/ICDM.2018.00035-var11",
+    "abstract": "We propose a sequential model based on self-attention mechanisms, which allows for capturing long-term semantics and predicting based on relatively few actions.",
+    "citation_count": 1800,
+    "open_access": true,
+    "topics": [
+      "sequential recommendation",
+      "self-attention",
+      "recommender systems"
+    ],
+    "methods": [
+      "Self-Attention",
+      "Transformer"
+    ],
+    "datasets": [
+      "Amazon Reviews",
+      "Steam",
+      "MovieLens"
+    ],
+    "keywords": [
+      "SASRec",
+      "Transformers",
+      "Sequential Behavior"
+    ],
+    "problem": "Capturing both long-term semantics and short-term intents in sequences.",
+    "methodology": "Use Transformer's self-attention to weight previous items in a sequence.",
+    "findings": "SASRec outperforms CNN/RNN based models and is highly parallelizable.",
+    "limitations": "Does not explicitly model time intervals between actions.",
+    "future_work": "Incorporate context and timestamps into the attention mechanism."
+  },
+  {
+    "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (Variant 11)",
+    "authors": [
+      {
+        "id": 9,
+        "name": "Lihong Li"
+      },
+      {
+        "id": 10,
+        "name": "Wei Chu"
+      }
+    ],
+    "year": 2023,
+    "venue": "WWW",
+    "doi": "10.1145/1772690.1772758-var11",
+    "abstract": "We model personalized recommendation of news articles as a contextual bandit problem, and propose an algorithm, LinUCB, that selects articles based on user and article features.",
+    "citation_count": 3200,
+    "open_access": true,
+    "topics": [
+      "contextual bandits",
+      "news recommendation",
+      "reinforcement learning"
+    ],
+    "methods": [
+      "LinUCB",
+      "Contextual Bandits",
+      "Upper Confidence Bound"
+    ],
+    "datasets": [
+      "Yahoo! Front Page"
+    ],
+    "keywords": [
+      "Exploration vs Exploitation",
+      "Personalization",
+      "Bandits"
+    ],
+    "problem": "Cold-start recommendation and exploration-exploitation tradeoff.",
+    "methodology": "Linear upper confidence bound algorithm with disjoint and hybrid models.",
+    "findings": "LinUCB significantly increases click-through rates compared to random or epsilon-greedy.",
+    "limitations": "Assumes linear relationship between features and expected reward.",
+    "future_work": "Extend to non-linear payoff functions and dependent arms."
+  }
+]
