@@ -29,6 +29,7 @@ def get_paper_analysis(paper_id: int):
     text = paper.abstract or ""
     
     analysis = {
+        "paper_id": paper_id,
         "summary": [],
         "research_problem": extract_claims(text, ["address", "propose", "challenge", "aim", "problem"]),
         "methodology": extract_claims(text, ["we propose", "using", "based on", "method", "model", "algorithm"]),
