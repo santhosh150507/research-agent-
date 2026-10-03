@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
-import { SearchX } from "lucide-react";
-import { EmptyState } from "@/components/common/EmptyState";
+"use client";
 
-export const metadata: Metadata = { title: "Research Gaps" };
+import { GapsTab } from "@/components/research/tabs/GapsTab";
 
 export default function GapsPage() {
   return (
-    <div className="flex flex-1 flex-col p-6">
-      <EmptyState
-        icon={<SearchX className="h-6 w-6" />}
-        title="Research Gaps coming soon"
-        description='Potentially underexplored areas identified from the retrieved literature, with supporting papers and caution wording.'
-      />
+    <div className="flex flex-1 flex-col p-6 bg-muted/10 h-[calc(100vh-64px)] overflow-y-auto">
+      <div className="max-w-6xl mx-auto w-full">
+        <h1 className="text-2xl font-bold mb-6">Research Gaps & Opportunities</h1>
+        <GapsTab />
+      </div>
     </div>
   );
 }

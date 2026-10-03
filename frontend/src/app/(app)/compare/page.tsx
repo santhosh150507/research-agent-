@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
-import { Columns2 } from "lucide-react";
-import { EmptyState } from "@/components/common/EmptyState";
+"use client";
 
-export const metadata: Metadata = { title: "Compare Papers" };
+import { ComparisonTab } from "@/components/research/tabs/ComparisonTab";
 
 export default function ComparePage() {
   return (
-    <div className="flex flex-1 flex-col p-6">
-      <EmptyState
-        icon={<Columns2 className="h-6 w-6" />}
-        title="Paper Comparison coming soon"
-        description="Select 2–5 papers to generate a side-by-side comparison table with grounded narrative."
-      />
+    <div className="flex flex-1 flex-col p-6 bg-muted/10 h-[calc(100vh-64px)] overflow-y-auto">
+      <div className="max-w-6xl mx-auto w-full">
+        <h1 className="text-2xl font-bold mb-6">Compare Papers</h1>
+        <ComparisonTab />
+      </div>
     </div>
   );
 }
