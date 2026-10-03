@@ -1,10 +1,11 @@
-from fastapi import APIRouter
-from app.core.errors import AppException
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.database import get_db
+from app.api.deps import get_current_user
+from app.services.workspace import dashboard
 
 router = APIRouter()
 
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
-
 @router.get("/dashboard")
-def get_dashboard(): not_impl()
+def get_dashboard(db: Session = Depends(get_db), user = Depends(get_current_user)):
+    return dashboard.get_dashboard(db, user.id)

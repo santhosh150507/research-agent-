@@ -1,16 +1,43 @@
-from fastapi import APIRouter
-from app.core.errors import AppException
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.database import get_db
+from app.api.deps import get_current_user
+from app.services.workspace import library
+from pydantic import BaseModel
+from typing import Optional
 
 router = APIRouter()
 
-def not_impl():
-    raise AppException(code="NOT_IMPLEMENTED", message="Not Implemented", status_code=501)
+class SavePaperRequest(BaseModel):
+    paper_id: int
+    tags: Optional[list[str]] = None
+    collection_id: Optional[int] = None
+
+class UpdateSavedPaperRequest(BaseModel):
+    status: Optional[str] = None
+    bookmarked: Optional[bool] = None
+    tags: Optional[list[str]] = None
 
 @router.get("/library")
-def get_library(): not_impl()
+def get_library(
+    status: Optional[str] = None,
+    tag: Optional[str] = None,
+    collection_id: Optional[int] = None,
+    bookmarked: Optional[bool] = None,
+    q: Optional[str] = None,
+    db: Session = Depends(get_db),
+    user = Depends(get_current_user)
+):
+    return library.get_library(db, user.id, status, tag, collection_id, bookmarked, q)
+
 @router.post("/library/papers")
-def add_lib_paper(): not_impl()
+def add_lib_paper(req: SavePaperRequest, db: Session = Depends(get_db), user = Depends(get_current_user)):
+    return library.save_paper(db, user.id, req.paper_id, req.tags, req.collection_id)
+
 @router.patch("/library/papers/{paper_id}")
-def upd_lib_paper(paper_id: int): not_impl()
-@router.delete("/library/papers/{paper_id}")
-def del_lib_paper(paper_id: int): not_impl()
+def upd_lib_paper(paper_id: int, req: UpdateSavedPaperRequest, db: Session = Depends(get_db), user = Depends(get_current_user)):
+    return library.update_saved_paper(db, user.id, paper_id, req.status, req.bookmarked, req.tags)
+
+@router.delete("/library/papers/{paper_id}", status_code=204)
+def del_lib_paper(paper_id: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
+    library.delete_saved_paper(db, user.id, paper_id)

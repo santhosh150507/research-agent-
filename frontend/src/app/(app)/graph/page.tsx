@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import { Network } from "lucide-react";
-import { EmptyState } from "@/components/common/EmptyState";
+"use client";
 
-export const metadata: Metadata = { title: "Research Graph" };
+import { GraphTab } from "@/components/research/tabs/GraphTab";
 
 export default function GraphPage() {
   return (
-    <div className="flex flex-1 flex-col p-6">
-      <EmptyState
-        icon={<Network className="h-6 w-6" />}
-        title="Research Graph coming soon"
-        description="Interactive knowledge graph connecting papers, authors, topics, methods and datasets."
-      />
+    <div className="flex flex-1 flex-col p-6 bg-muted/10 h-[calc(100vh-64px)]">
+      <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
+        <h1 className="text-2xl font-bold mb-6 shrink-0">Knowledge Graph</h1>
+        <div className="flex-1 min-h-0">
+          <GraphTab />
+        </div>
+      </div>
     </div>
   );
 }

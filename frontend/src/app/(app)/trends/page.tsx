@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
-import { TrendingUp } from "lucide-react";
-import { EmptyState } from "@/components/common/EmptyState";
+"use client";
 
-export const metadata: Metadata = { title: "Research Trends" };
+import { TrendsTab } from "@/components/research/tabs/TrendsTab";
 
 export default function TrendsPage() {
   return (
-    <div className="flex flex-1 flex-col p-6">
-      <EmptyState
-        icon={<TrendingUp className="h-6 w-6" />}
-        title="Research Trends coming soon"
-        description="Papers by year, emerging methods, popular datasets and keyword trends."
-      />
+    <div className="flex flex-1 flex-col p-6 bg-muted/10 h-[calc(100vh-64px)] overflow-y-auto">
+      <div className="max-w-6xl mx-auto w-full">
+        <h1 className="text-2xl font-bold mb-6">Research Trends</h1>
+        <TrendsTab />
+      </div>
     </div>
   );
 }
