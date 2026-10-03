@@ -1,1 +1,1 @@
-# deduplication.py
+def dedupe(papers): return papers
